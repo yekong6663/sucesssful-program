@@ -44,3 +44,24 @@ class Teacher_t(Person_t):
     """
     def introducePerson(self):
         return f"姓名:{self.name},年龄:{self.age},教授科目:{self.subject}"
+"""@brief create a Student-t class inherited from Person_t class"""
+class Student_t(Person_t):
+    """
+    @biref initialize the Student_t class
+    @param self parameter self
+    @param name parameter name
+    @param age parameter age
+    @param grade parameter grade
+    @returen None
+    """
+    def __init__(self,name:str,age:int,grade:str):
+         super().__init__(name,age)
+         self.grade=grade
+    """
+    @biref recreate a introduction method
+    @param self parameter self
+    @returen 姓名:{self.name},年龄:{self.age},年级:{self.grade}
+    """
+    def introducePerson(self):
+        return f"姓名:{self.name},年龄:{self.age},年级:{self.grade}"
+
