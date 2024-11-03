@@ -64,4 +64,49 @@ class Student_t(Person_t):
     """
     def introducePerson(self):
         return f"姓名:{self.name},年龄:{self.age},年级:{self.grade}"
+"""@brief create a Course_t class"""
+class Course_t():
+    """
+    @biref initialize the Student_t class
+    @param self parameter self
+    @param course_name parameter 
+    @param teacher parameter teacher
+    @param student parameter student
+    @returen None
+    """
+    def __init__(self,course_name:str,teacher):
+        self.course_name=course_name
+        self.teacher=teacher
+        self.students=[]
+    """
+    @biref create method for adding students
+    @param self parameter self
+    @param string parameter string
+    @returen None
+    """
+    def addStudent(self,student):
+        self.students.append(student)
+    """
+    @biref create method for removing students
+    @param self parameter self
+    @param string parameter string
+    @returen None
+    """
+    def removeStudent(self,student):
+        self.students.remove(student)
+    """
+    @biref create method for showing entire information
+    @param self parameter self
+    @param string parameter string
+    @returen None
+    """
+    def showCaseInfo(self):
+        print(f"课程名:{self.course_name}")
+        print(f"授课老师:{self.teacher.introducePerson()}")
+        for student in self.students:
+            print(f"选课学生:,{student.introducePerson()}")
+
+
+
+
 
